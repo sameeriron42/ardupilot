@@ -1,3 +1,13 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Explicitly declare text files to always be normalized and converted
+# to native line endings on checkout.
+/**.cpp text
+/**.c text
+/**.h text
+/**.py text
+/**.txt text
 
 # bash gets confused if you pass in .sh files from windows
 # This breaks Vagrant for some users.
@@ -7,6 +17,7 @@
 *.elf -diff
 *.hex -diff
 
+# Denote all files that are truly binary and should not be modified.
 *.bin binary linguist-generated
 *.elf binary linguist-generated
 *.hex binary linguist-generated
